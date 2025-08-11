@@ -1,0 +1,4 @@
+temporalio
+woocommerce
+python-dotenv
+aiohttp
