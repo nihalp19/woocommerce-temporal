@@ -21,14 +21,13 @@ async def main():
             "url": os.getenv("WC_URL"),
             "consumer_key": os.getenv("WC_CONSUMER_KEY"),
             "consumer_secret": os.getenv("WC_CONSUMER_SECRET")
-        }, "products"],
+        }, "orders"],
         id=workflow_id,
         task_queue="woocommerce-task-queue"
     )
 
     print(f"\n✅ Workflow {workflow_id} completed")
     print("Fetched data:\n")
-    # Pretty JSON output
     print(json.dumps(result, indent=2, ensure_ascii=False))
 
 
